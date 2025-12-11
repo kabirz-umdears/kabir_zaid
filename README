@@ -1,0 +1,20 @@
+NOTE: I understand this is not required to add, however when I tested I found myself recieving errors, even though I had everything completed correctly. Below is an explanation and info. Thank you, Zaid Kabir.
+
+
+
+
+When the development server starts, Codespaces forwards the port so the page can open in the browser. You may see a WebSocket security message in the browser console. This is normal in Codespaces and does not affect the Vue app or the container setup.
+
+To view the Vue app without the message, you can build and serve the production version:
+yarn build
+npm install -g serve
+serve -s dist -l 8081
+
+To confirm that Flask is installed, you can run this command:
+python -c "import flask; print(flask.__version__)"
+
+
+You can also test Flask by creating a simple app and starting it with:
+python app.py
+
+Codespaces will forward the port so you can open the page. These steps show that Vue.js and Flask were installed correctly through the Dockerfile and that the container environment works as intended.
